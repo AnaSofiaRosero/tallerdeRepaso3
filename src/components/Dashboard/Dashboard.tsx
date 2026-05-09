@@ -28,15 +28,61 @@ function Dashboard() {
     <div className="dashboard">
 
       <h1>Proyectos Instalados</h1>
+      <div className="filters">
 
-      <select
-        onChange={(e) => setFilter(e.target.value)}
+      <button
+        className={
+          filter === "Todos"
+            ? "active-filter"
+            : ""
+        }
+        onClick={() =>
+          setFilter("Todos")
+        }
       >
-        <option>Todos</option>
-        <option>Activo</option>
-        <option>Mantenimiento</option>
-        <option>Pendiente</option>
-      </select>
+        Todos
+      </button>
+
+      <button
+        className={
+          filter === "Activo"
+            ? "active-filter"
+            : ""
+        }
+        onClick={() =>
+          setFilter("Activo")
+        }
+      >
+        Activo
+      </button>
+
+      <button
+        className={
+          filter === "Mantenimiento"
+            ? "active-filter"
+            : ""
+        }
+        onClick={() =>
+          setFilter("Mantenimiento")
+        }
+      >
+        Mantenimiento
+      </button>
+
+      <button
+        className={
+          filter === "Pendiente"
+            ? "active-filter"
+            : ""
+        }
+        onClick={() =>
+          setFilter("Pendiente")
+        }
+      >
+        Pendiente
+      </button>
+
+      </div>
 
       <div className="cards-container">
 

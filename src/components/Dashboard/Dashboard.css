@@ -1,45 +1,19 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  background: linear-gradient(
-    135deg,
-    #f4f4f4,
-    #e8f0df
-  );
-  min-height: 100vh;
-}
-
 .dashboard {
-  padding: 50px;
-  max-width: 1500px;
+  max-width: 1400px;
   margin: auto;
+  padding: 50px;
   text-align: center;
 }
 
 .dashboard h1 {
-  font-size: 60px;
-  color: #1f1f1f;
-  margin-bottom: 25px;
-}
 
-.dashboard select {
-  padding: 12px 18px;
-  border-radius: 12px;
-  border: none;
-  font-size: 16px;
-  margin-bottom: 40px;
-  background-color: white;
-  color: #333;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  cursor: pointer;
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: white;
 }
 
 .cards-container {
+
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -47,67 +21,97 @@ body {
 }
 
 .card {
+
   width: 280px;
-  padding: 30px;
+  padding: 25px;
   border-radius: 24px;
-
-  background: rgba(214, 235, 200, 0.7);
-
-  backdrop-filter: blur(10px);
-
+  background:linear-gradient(135deg,#a9fcab,#96df62);
   box-shadow:
     0 10px 25px rgba(0,0,0,0.08);
 
-  transition: all 0.3s ease;
-
+  transition: 0.3s;
   text-align: center;
+  cursor: pointer;
 }
 
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
+
+  transform:
+    translateY(-12px)
+    scale(1.03);
 
   box-shadow:
-    0 20px 35px rgba(0,0,0,0.12);
+    0 25px 45px rgba(0,0,0,0.35);
 }
 
 .card h2 {
-  font-size: 22px;
-  margin-bottom: 15px;
+
   color: #1f1f1f;
+  margin-bottom: 12px;
 }
 
 .card p {
-  color: #555;
+
+  color: #444;
   margin-bottom: 8px;
-  font-size: 18px;
 }
 
 .card a {
+
   display: inline-block;
   margin-top: 12px;
-
   text-decoration: none;
-
-  color: white;
-
-  background-color: #2f8f46;
-
+  background: #0d570c;
+  color: rgb(231, 231, 231);
   padding: 10px 18px;
-
   border-radius: 10px;
-
   transition: 0.3s;
 }
 
 .card a:hover {
-  background-color: #246d36;
-}
 
-.card a {
-  cursor: pointer;
-}
-
-.card a:hover {
-  background-color: #246d36;
   transform: scale(1.05);
+  box-shadow:
+    0 10px 20px rgba(3, 85, 19, 0.918);
+}
+
+.filters {
+
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+
+  border: none;
+  padding: 12px 24px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  backdrop-filter: blur(10px);
+}
+
+.filters button:hover {
+
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-2px);
+}
+
+.active-filter {
+
+  background:
+    linear-gradient(
+      135deg,
+      #a855f7,
+      #d946ef
+    );
+
+  box-shadow:
+    0 10px 25px rgba(0, 58, 8, 0.792);
 }
